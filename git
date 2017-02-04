@@ -34,6 +34,9 @@ git remote add 跟踪库 git@github.com:账号/远程库.git
 git add 文件
 添加文件到缓存区
 
+git rm 文件
+删除文件
+
 git commit –m “备注”
 备注修改
 
