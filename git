@@ -1,5 +1,12 @@
-=================================创建连接
-ssh-keygen –t rsa –C “我的邮箱”
+=================================区分概念
+用户：Linux用户名
+账号：GitHub账户名
+邮箱：GitHub注册邮箱
+本地库：本地项目仓库
+远程库：GitHub端仓库
+跟踪库：用于推送
+=================================首次使用，创建连接
+ssh-keygen –t rsa –C “邮箱”
 创建密钥（包含公钥、密钥）
 
 cd .ssh
@@ -8,30 +15,38 @@ vim id_rsa.pub
 
 ssh -T git@github.com
 查看ssh连接状态
-=================================创建工作区
-git init
-指定当前目录为仓库
-
-git clone git@github.com:账号/库名.git
-下载项目
-=================================配置git
+=================================全局配置git
 git config --global user.name "账号"
 git config --global user.email "邮箱"
 
 git config --list
 查看git配置
-=================================未整理
-git remote add 库名 git@github.com:账号/库名.git
-创建远程仓库
+=================================创建工作区
+git init
+指定当前目录为仓库
 
-git pull git@github.com:账号/库名.git
-远程->本地
+git clone git@github.com:账号/远程库.git
+克隆github的远程库
 
+git remote add 跟踪库 git@github.com:账号/远程库.git
+跟踪库方便推送时，自动推送到绑定的远程库
+=================================修改与查询
 git add 文件
-添加文件到缓存期
+添加文件到缓存区
 
 git commit –m “备注”
 备注修改
 
-git push 库名 master
-推送到主分支
+git status
+查看修改文件
+
+git diff
+查看修改内容
+
+git push 跟踪库 master
+推送到远程库的主分支
+=================================未整理
+git pull git@github.com:账号/库名.git
+远程->本地
+
+
