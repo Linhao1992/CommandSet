@@ -5,6 +5,7 @@
 本地库：本地项目仓库
 远程库：GitHub端仓库
 跟踪库：用于推送
+
 =================================首次使用，创建连接
 ssh-keygen –t rsa –C “邮箱”
 创建密钥（包含公钥、密钥）
@@ -21,24 +22,33 @@ git config --global user.email "邮箱"
 
 git config --list
 查看git配置
-=================================创建工作区
-git init
-指定当前目录为仓库
+=================================具体操作
+工作区（代表项目的目录树）
+版本库（.git，是工作区的隐藏目录）
+暂存区（.git/index，代表index目录树）
+对象库（.git/objects）
+主分支（.git/master，代表master目录树）
 
-git clone git@github.com:账号/远程库.git
-克隆github的远程库
+工作区
+    创建git init（在仓库根目录创建.git版本库，子目录不生成）
+    删除rm -rf .git（删除.git版本库）
+    恢复git checkout .(index目录树->工作区)
+    恢复git checkout HEAD（master目录树->index目录树->工作区）
+    克隆git clone git@github.com:账号/远程库.git（远程库->本地库）
+暂存区
+    添加git add 文件（工作区->index目录树->objects库）
+    删除git rm --cached<文件>（删除index目录树/文件）
+    恢复git reset HEAD（master目录树->index目录树）
+主分支
+    更新git commit –m “备注”（index目录树->objects库->master目录树）
+
+
 
 git remote add 跟踪库 git@github.com:账号/远程库.git
 跟踪库方便推送时，自动推送到绑定的远程库
 =================================修改与查询
-git add 文件
-添加文件到缓存区
-
-git rm 文件
-删除文件
-
-git commit –m “备注”
-备注修改
+git checkout .
+index区->工作区，危险操作
 
 git status
 查看修改文件
@@ -52,4 +62,6 @@ git push 跟踪库 master
 git pull git@github.com:账号/库名.git
 远程->本地
 
+更新到
+http://www.runoob.com/git/git-basic-operations.html
 
