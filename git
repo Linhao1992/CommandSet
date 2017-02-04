@@ -16,13 +16,13 @@ vim id_rsa.pub
 
 ssh -T git@github.com
 查看ssh连接状态
-=================================全局配置git
+==============================================================配置
 git config --global user.name "账号"
 git config --global user.email "邮箱"
 
 git config --list
 查看git配置
-=================================具体操作
+==============================================================操作
 工作区（代表项目的目录树）
 版本库（.git，是工作区的隐藏目录）
 暂存区（.git/index，代表index目录树）
@@ -36,10 +36,13 @@ git config --list
     恢复git checkout HEAD（master目录树->index目录树->工作区）
     克隆git clone git@github.com:账号/远程库.git（远程库->本地库）
 暂存区
-    添加git add 文件（工作区->index目录树->objects库）
+    添加git add .<文件>（工作区->index目录树->objects库）
     删除git rm --cached<文件>（删除index目录树/文件）
-    恢复git reset HEAD（master目录树->index目录树）
-主分支
+    重名git mv oldname newname（重命名）
+    恢复git reset HEAD --<file>（master目录树->index目录树）
+    状态git status -s(-s简短输出)
+    状态git diff（尚未缓存的变化，--cached已缓存的变化）
+分支
     更新git commit –m “备注”（index目录树->objects库->master目录树）
 
 
@@ -50,12 +53,6 @@ git remote add 跟踪库 git@github.com:账号/远程库.git
 git checkout .
 index区->工作区，危险操作
 
-git status
-查看修改文件
-
-git diff
-查看修改内容
-
 git push 跟踪库 master
 推送到远程库的主分支
 =================================未整理
@@ -63,5 +60,5 @@ git pull git@github.com:账号/库名.git
 远程->本地
 
 更新到
-http://www.runoob.com/git/git-basic-operations.html
+http://www.runoob.com/git/git-branch.html
 
