@@ -45,17 +45,11 @@ git config --list
     状态git diff（尚未缓存的变化，--cached已缓存的变化）
 分支
     更新git commit –m “备注”（index目录树->objects库->master目录树）
-
-
-
-git remote add 跟踪库 git@github.com:账号/远程库.git
-跟踪库方便推送时，自动推送到绑定的远程库
+    跟踪git remote add 跟踪库 git@github.com:账号/远程库.git（初次推送要用）
+    推送git push 跟踪库 master（推送到远程库的主分支）
 =================================修改与查询
 git checkout .
 index区->工作区，危险操作
-
-git push 跟踪库 master
-推送到远程库的主分支
 =================================进度
 更新到
 http://www.runoob.com/git/git-branch.html
