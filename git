@@ -39,8 +39,8 @@ git config --list
     删除git rm --cached<文件>（删除index目录树/文件）
     重名git mv oldname newname（重命名）
     恢复git reset HEAD --<file>（master目录树->index目录树）
-    状态git status -s(-s简短输出)
-    状态git diff（尚未缓存的变化，--cached已缓存的变化）
+    状态git status -s(-s简短输出,commit后清空)
+    状态git diff（尚未缓存的变化，--cached已缓存的变化，commit后清空）
 分支
     更新git commit –m “备注”（index目录树->objects库->master目录树）
     跟踪git remote add origin git@github.com:账号/远程库.git（初次推送要用）
