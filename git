@@ -4,8 +4,6 @@
 邮箱：GitHub注册邮箱
 本地库：本地项目仓库
 远程库：GitHub端仓库
-跟踪库：用于推送
-
 =================================首次使用，创建连接
 ssh-keygen –t rsa –C “邮箱”
 创建密钥（包含公钥、密钥）
@@ -45,12 +43,11 @@ git config --list
     状态git diff（尚未缓存的变化，--cached已缓存的变化）
 分支
     更新git commit –m “备注”（index目录树->objects库->master目录树）
-    跟踪git remote add 跟踪库 git@github.com:账号/远程库.git（初次推送要用）
-    推送git push 跟踪库 master（推送到远程库的主分支）
+    跟踪git remote add origin git@github.com:账号/远程库.git（初次推送要用）
+    推送git push origin master（当前版本库－>远程库主分支）
 =================================修改与查询
 git checkout .
 index区->工作区，危险操作
 =================================进度
 更新到
 http://www.runoob.com/git/git-branch.html
-
