@@ -31,7 +31,7 @@ git config --list
     克隆git clone git@github.com:账号/远程库.git（远程库->本地库）
     创建git init（在仓库根目录创建.git版本库，子目录不生成）
     删除rm -rf .git（删除.git版本库）
-    更新git checkout .(index目录树->工作区)
+    恢复git checkout .(index目录树->工作区)
     恢复git checkout HEAD（master目录树->index目录树->工作区）
     抓取git pull git@github.com:账号/库名.git（远程->本地）
 修改
@@ -45,14 +45,9 @@ git config --list
     更新git commit –m “备注”（index目录树->objects库->master目录树）
     跟踪git remote add origin git@github.com:账号/远程库.git（初次推送要用）
     推送git push origin master（当前版本库－>远程库主分支）
-<<<<<<< HEAD
 分支
     创建git branch 分支名
     切换git checkout 分支名
     合并git merge
 =================================进度
 更新到http://www.runoob.com/git/git-branch.html
-=======
-=================================进度
-http://www.runoob.com/git/git-branch.html
->>>>>>> origin/master
