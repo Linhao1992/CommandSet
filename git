@@ -46,5 +46,4 @@ git config --list
     跟踪git remote add origin git@github.com:账号/远程库.git（初次推送要用）
     推送git push origin master（当前版本库－>远程库主分支）
 =================================进度
-更新到
-http://www.runoob.com/git/git-branch.html
+更新到http://www.runoob.com/git/git-branch.html
