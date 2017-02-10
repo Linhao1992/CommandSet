@@ -1,9 +1,0 @@
-未整理
-----------------------------无法git push
-git fetch 跟踪库
-git merge 跟踪库/master
-----------------------------待验证
-每个项目文件夹下都有一个.git文件
-记录该项目的版本库
-所以git remote add 远程库 git@github.com:Linhao1992/Command.git
-的远程库名没必要重命名成特定名称，在各自项目文件下编辑都能推送到位

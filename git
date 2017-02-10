@@ -35,6 +35,7 @@ git config --list
     恢复git checkout HEAD（master目录树->index目录树->工作区）
     抓取git pull git@github.com:账号/库名.git（远程->本地）
 修改
+    更新git fetch 跟踪库
     添加git add .<文件>（工作区->index目录树->objects库）
     删除git rm --cached<文件>（删除index目录树/文件）
     重名git mv oldname newname（重命名）
@@ -43,7 +44,8 @@ git config --list
     状态git diff（尚未缓存的变化，--cached已缓存的变化，commit后清空）
 保存
     更新git commit –m “备注”（index目录树->objects库->master目录树）
-    跟踪git remote add origin git@github.com:账号/远程库.git（初次推送要用）
+    跟踪git remote add origin git@github.com:账号/远程库.git（初次推送要用，不必改origin）
+    合并git merge 跟踪库／master（若多个master推送，要先fetch更新，merge合并，最后推送）
     推送git push origin master（当前版本库－>远程库主分支）
 分支
     创建git branch 分支名
